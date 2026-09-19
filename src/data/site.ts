@@ -7,6 +7,8 @@ export const site = {
   url: "https://maniverdi.be",
   legalForm: "BV",
   companyNumber: "BE0788.616.730",
+  foundingDate: "2022-07-14",
+  founder: "Noah Compus",
   address: {
     addressLocality: "Hasselt",
     postalCode: "3500",

@@ -40,6 +40,13 @@ const organizationSchema = {
   telephone: site.phoneHref,
   email: site.email,
   priceRange: site.priceRange,
+  foundingDate: site.foundingDate,
+  founder: {
+    "@type": "Person",
+    "@id": `${site.url}/#founder`,
+    name: site.founder,
+    jobTitle: "Zaakvoerder",
+  },
   inLanguage: "nl-BE",
   sameAs: [site.social.facebook, site.social.instagram],
   knowsAbout: ["Tuinontwerp", "Tuinaanleg", "Tuinonderhoud", "Grondwerken", "Rioleringswerken"],
