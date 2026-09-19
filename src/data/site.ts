@@ -8,7 +8,7 @@ export const site = {
   legalForm: "BV",
   companyNumber: "BE0788.616.730",
   foundingDate: "2022-07-14",
-  founder: "Noah Compus",
+  founder: "Noah Campus",
   address: {
     addressLocality: "Hasselt",
     postalCode: "3500",
