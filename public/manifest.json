@@ -1,0 +1,13 @@
+{
+  "name": "Mani Verdi - Tuinen & landschappen",
+  "short_name": "Mani Verdi",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#E8E8E0",
+  "theme_color": "#1B221D",
+  "icons": [
+    { "src": "/favicon-32.png", "sizes": "32x32", "type": "image/png" },
+    { "src": "/favicon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ]
+}

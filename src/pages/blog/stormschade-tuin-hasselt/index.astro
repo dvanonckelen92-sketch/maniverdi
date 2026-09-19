@@ -37,6 +37,7 @@ const breadcrumbs = [
   description={post.seoDescription}
   path={`/blog/${post.slug}/`}
   image={post.image}
+  heroImage={post.image}
   breadcrumbs={breadcrumbs}
   jsonLd={[blogPostingSchema(post), faqSchema(faqItems)]}
 >

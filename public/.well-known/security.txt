@@ -1,0 +1,4 @@
+Contact: mailto:tuinen@maniverdi.be
+Expires: 2027-09-19T00:00:00.000Z
+Canonical: https://maniverdi.be/.well-known/security.txt
+Preferred-Languages: nl, en
