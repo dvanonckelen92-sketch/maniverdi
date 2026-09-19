@@ -13,21 +13,21 @@ import { faqSchema } from "../../data/schema";
 const service = services.find((s) => s.slug === "tuinaanleg-hasselt")!;
 const faqItems = [
   {
-    q: "Wat kost tuinaanleg in Hasselt?",
+    q: "Wat kost tuinaanleg in Limburg?",
     a: "De prijs hangt af van de oppervlakte, het grondwerk en de gekozen materialen voor bestrating en beplanting. Na een gratis werfbezoek ontvangt u van Mani Verdi een offerte op maat, zonder verrassingen achteraf.",
   },
   {
     q: "Hoe lang duurt de aanleg van een tuin?",
-    a: "Een gemiddelde particuliere tuin in Hasselt duurt, afhankelijk van omvang en grondwerk, twee tot vier weken. Bij het werfbezoek geeft Mani Verdi een concrete planning voor uw project.",
+    a: "Een gemiddelde particuliere tuin duurt, afhankelijk van omvang en grondwerk, twee tot vier weken. Bij het werfbezoek geeft Mani Verdi een concrete planning voor uw project.",
   },
 ];
 const breadcrumbs = [
   { name: "Home", path: "/" },
-  { name: "Tuinaanleg Hasselt", path: "/tuinaanleg-hasselt/" },
+  { name: "Tuinaanleg Limburg", path: "/tuinaanleg-hasselt/" },
 ];
 ---
 <Layout
-  title="Tuinaanleg Hasselt | Mani Verdi"
+  title="Tuinaanleg Limburg | Mani Verdi"
   description={service.seoDescription}
   path="/tuinaanleg-hasselt/"
   image={service.image}
@@ -38,8 +38,8 @@ const breadcrumbs = [
   <Header />
   <main id="top">
     <Hero
-      eyebrow="Dienst · Hasselt"
-      title="Tuinaanleg Hasselt"
+      eyebrow="Dienst · Limburg"
+      title="Tuinaanleg Limburg"
       lede={service.heroLede}
       bgImage={service.image}
       bgAlt={service.imageAlt}
@@ -50,12 +50,12 @@ const breadcrumbs = [
     <Breadcrumbs items={breadcrumbs} />
     <section class="page-content">
       <div class="wrap">
-        <h2>Tuinaanleg in Hasselt van grondwerk tot laatste plant</h2>
+        <h2>Tuinaanleg in Limburg van grondwerk tot laatste plant</h2>
         <p>
-          Tuinaanleg in Hasselt vraagt om meer dan bestrating en planten: de bodem in en rond Hasselt varieert van
-          zware klei tot zandleem, en dat bepaalt hoe funderingen, drainage en beplanting aangepakt worden. Mani
-          Verdi start elk project met een werfbezoek waarbij grondsoort en waterhuishouding bekeken worden, voor er
-          een offerte volgt.
+          Tuinaanleg vraagt om meer dan bestrating en planten: de bodem in Limburg varieert van zandgrond in het
+          noorden tot zware klei en zandleem in Haspengouw, en dat bepaalt hoe funderingen, drainage en beplanting
+          aangepakt worden. Mani Verdi start elk project met een werfbezoek waarbij grondsoort en waterhuishouding
+          bekeken worden, voor er een offerte volgt.
         </p>
         <p>
           Voor projecten die eerst grondverzet of afbraak van oude verhardingen vereisen, gebeuren die
