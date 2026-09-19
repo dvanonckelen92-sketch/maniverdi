@@ -1,0 +1,100 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Hero from "../../components/Hero.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import RelatedServices from "../../components/RelatedServices.astro";
+import Faq from "../../components/Faq.astro";
+import Cta from "../../components/Cta.astro";
+import Footer from "../../components/Footer.astro";
+import { services } from "../../data/site";
+import { faqSchema } from "../../data/schema";
+
+const service = services.find((s) => s.slug === "grondwerken-hasselt")!;
+const faqItems = [
+  {
+    q: "Verzorgt Mani Verdi ook de afvoer van grond en afbraakmateriaal?",
+    a: "Ja, grondverzet en de afvoer van overtollige grond en afbraakmateriaal maken deel uit van de grondwerken die Mani Verdi in Hasselt en omgeving uitvoert.",
+  },
+  {
+    q: "Kan ik grondwerken laten uitvoeren zonder dat Mani Verdi ook de tuin aanlegt?",
+    a: "Ja, grondwerken en afbraakwerken kunnen als losse opdracht. In de praktijk kiezen de meeste klanten er wel voor om aanleg en grondwerk bij hetzelfde team te leggen.",
+  },
+];
+const breadcrumbs = [
+  { name: "Home", path: "/" },
+  { name: "Grondwerken Hasselt", path: "/grondwerken-hasselt/" },
+];
+---
+<Layout
+  title="Grondwerken Hasselt | Mani Verdi"
+  description={service.seoDescription}
+  path="/grondwerken-hasselt/"
+  image={service.image}
+  breadcrumbs={breadcrumbs}
+  jsonLd={[faqSchema(faqItems)]}
+>
+  <Header />
+  <main id="top">
+    <Hero
+      eyebrow="Dienst · Hasselt"
+      title="Grondwerken Hasselt"
+      lede={service.heroLede}
+      bgImage="/images/project-beton.jpg"
+      bgAlt="Grondwerken bij het storten van een betonnen oprit"
+      primaryLabel="Gratis werfbezoek aanvragen"
+      primaryHref="/contact/"
+      compact
+    />
+    <Breadcrumbs items={breadcrumbs} />
+    <section class="page-content">
+      <div class="wrap">
+        <h2>Grondwerken in Hasselt als basis voor uw tuinproject</h2>
+        <p>
+          Grondwerken in Hasselt vormen vaak de eerste stap van een tuinproject, en meteen ook de stap die het
+          resultaat het meest bepaalt. Een verkeerd afgewerkte ondergrond geeft binnen enkele jaren verzakkingen in
+          bestrating of een gazon dat water blijft vasthouden. Mani Verdi voert grondverzet en egalisatie uit met
+          professionele machines, afgestemd op de bodem van uw perceel.
+        </p>
+
+        <h2>Afbraak van oude verhardingen en constructies</h2>
+        <p>
+          Bij een tuinrenovatie moet vaak eerst oude bestrating, een verouderd terras of een bijgebouw weg. Mani
+          Verdi breekt deze constructies af en voert het puin af, zodat er een schone basis overblijft voor de
+          nieuwe <a href="/tuinaanleg-hasselt/">tuinaanleg</a>.
+        </p>
+
+        <h2>Grondwerk en riolering horen vaak samen</h2>
+        <p>
+          Wanneer grondwerken plaatsvinden, komt de riolering geregeld mee aan de beurt, bijvoorbeeld bij een
+          afkoppeling van hemelwater of een verplaatsing van een aansluiting. Mani Verdi voert deze
+          <a href="/rioleringswerken-hasselt/">rioleringswerken</a> uit als onderdeel van hetzelfde traject, zodat de
+          werf maar één keer open hoeft.
+        </p>
+
+        <h2>Grondwerken na stormschade</h2>
+        <p>
+          Ook na een storm vraagt een tuin soms om stevig grondwerk: een ontwortelde boom laat een put achter, en
+          verzakte grond onder bestrating moet opnieuw verdicht worden. Lees in de blog
+          <a href="/blog/stormschade-tuin-hasselt/">stormschade in uw tuin in Hasselt: wat nu?</a> wat u eerst zelf
+          checkt en wanneer u beter een vakman belt.
+        </p>
+      </div>
+    </section>
+    <section class="page-content" style="padding-top:0">
+      <div class="wrap" style="max-width:1180px">
+        <h2>Voorbeelden van grondwerken</h2>
+        <div class="photo-grid">
+          <img src="/images/grondwerken.jpg" alt="Grond- en afbraakwerken als basis voor een nieuw tuinproject" loading="lazy" />
+          <img src="/images/grondwerken-perceel.jpg" alt="Grondwerken op een perceel in aanleg" loading="lazy" />
+          <img src="/images/grondwerken-poort.jpg" alt="Grondwerken bij de toegangspoort van een perceel" loading="lazy" />
+          <img src="/images/grondwerken-egaliseren.jpg" alt="Egaliseren van de grond voor nieuwe aanleg" loading="lazy" />
+        </div>
+      </div>
+    </section>
+    <Faq items={faqItems} />
+    <RelatedServices exclude="grondwerken-hasselt" />
+    <Cta />
+  </main>
+  <Footer />
+</Layout>

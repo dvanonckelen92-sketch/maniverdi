@@ -1,0 +1,57 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Hero from "../../components/Hero.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import Cta from "../../components/Cta.astro";
+import Footer from "../../components/Footer.astro";
+
+const items = [
+  { img: "/images/tuinontwerp.jpg", alt: "3D-tuinontwerp met houten pergola en loungehoek", tag: "Ontwerp", href: "/tuinontwerp-hasselt/" },
+  { img: "/images/tuinaanleg.jpg", alt: "Afgewerkt totaalproject met grindoprit", tag: "Totaalproject", href: "/tuinaanleg-hasselt/" },
+  { img: "/images/hagen.jpg", alt: "Strak gesnoeide buxushagen na onderhoud", tag: "Onderhoud", href: "/tuinonderhoud-hasselt/" },
+  { img: "/images/grondwerken.jpg", alt: "Grond- en afbraakwerken in uitvoering", tag: "Grond & afbraak", href: "/grondwerken-hasselt/" },
+  { img: "/images/riolering.jpg", alt: "Graafwerk voor een rioleringsleiding in een tuin", tag: "Riolering", href: "/rioleringswerken-hasselt/" },
+];
+
+const breadcrumbs = [
+  { name: "Home", path: "/" },
+  { name: "Realisaties", path: "/realisaties/" },
+];
+---
+<Layout
+  title="Realisaties tuinaanleg Hasselt | Mani Verdi"
+  description="Bekijk realisaties van Mani Verdi in Hasselt en omgeving: tuinontwerp, tuinaanleg, onderhoud, grondwerken en rioleringswerken."
+  path="/realisaties/"
+  breadcrumbs={breadcrumbs}
+>
+  <Header />
+  <main id="top">
+    <Hero
+      eyebrow="Realisaties"
+      title="Laat u inspireren"
+      lede="Een overzicht van het werk van Mani Verdi in Hasselt en omgeving, van tuinontwerp tot de laatste snoeibeurt."
+      bgImage="/images/tuinaanleg.jpg"
+      bgAlt="Afgewerkt totaalproject met grindoprit bij een woning"
+      compact
+    />
+    <Breadcrumbs items={breadcrumbs} />
+    <section class="work" style="padding-top:0">
+      <div class="wrap">
+        <p style="color:var(--ink-soft);margin-bottom:24px;max-width:60ch">
+          Kies een dienst hieronder voor het volledige fotoalbum van dat type project.
+        </p>
+        <div class="related-grid cols-3">
+          {items.map((it) => (
+            <a class="related-card" href={it.href} style="aspect-ratio:4/5">
+              <img src={it.img} alt={it.alt} loading="lazy" />
+              <span>{it.tag}</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+    <Cta />
+  </main>
+  <Footer />
+</Layout>

@@ -1,0 +1,29 @@
+---
+const items = [
+  { img: "/images/tuinontwerp.jpg", alt: "3D-tuinontwerp met houten pergola en loungehoek", tag: "Ontwerpen" },
+  { img: "/images/tuinaanleg.jpg", alt: "Afgewerkt totaalproject met grindoprit", tag: "Totaalprojecten" },
+  { img: "/images/hagen.jpg", alt: "Strak gesnoeide buxushagen na onderhoud", tag: "Onderhoud" },
+  { img: "/images/grondwerken.jpg", alt: "Grond- en afbraakwerken in uitvoering", tag: "Grond & afbraak" },
+  { img: "/images/riolering.jpg", alt: "Graafwerk voor een rioleringsleiding in een tuin", tag: "Riolering" },
+];
+---
+<section class="work" id="realisaties">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Onze realisaties</p>
+        <h2>Laat u inspireren.</h2>
+      </div>
+      <p>Bekijk onze realisaties en droom alvast van uw eigen stukje paradijs.</p>
+    </div>
+    <div class="work-grid">
+      {items.map((it) => (
+        <div class="work-item">
+          <img src={it.img} alt={it.alt} loading="lazy" />
+          <span class="tag">{it.tag}</span>
+        </div>
+      ))}
+    </div>
+    <p style="margin-top:24px"><a class="btn ghost" href="/realisaties/">Alle realisaties bekijken</a></p>
+  </div>
+</section>

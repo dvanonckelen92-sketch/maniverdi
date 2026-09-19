@@ -1,0 +1,69 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Hero from "../../components/Hero.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import Footer from "../../components/Footer.astro";
+import { site } from "../../data/site";
+
+const breadcrumbs = [
+  { name: "Home", path: "/" },
+  { name: "Vacatures", path: "/vacatures/" },
+];
+---
+<Layout
+  title="Vacature tuinman Hasselt | Mani Verdi"
+  description="Mani Verdi zoekt een flexi-medewerker of zelfstandige met ervaring in de tuinbouw om het team in Hasselt te versterken."
+  path="/vacatures/"
+  breadcrumbs={breadcrumbs}
+>
+  <Header />
+  <main id="top">
+    <Hero
+      eyebrow="Vacature"
+      title="Versterk ons team in Hasselt"
+      lede="Mani Verdi zoekt een flexi-medewerker of zelfstandige met ervaring in de tuinbouw."
+      bgImage="/images/tuinaanleg.jpg"
+      bgAlt="Afgewerkt tuinaanlegproject van Mani Verdi"
+      primaryLabel={`Solliciteer via ${site.email}`}
+      primaryHref={`mailto:${site.email}?subject=Sollicitatie%20tuinman`}
+      compact
+    />
+    <Breadcrumbs items={breadcrumbs} />
+    <section class="page-content">
+      <div class="wrap">
+        <h2>Vacature: flexi of zelfstandige in de tuinaanleg</h2>
+        <p>
+          Mani Verdi breidt uit en zoekt in Hasselt en omgeving een extra paar handen: iemand met ervaring in de
+          tuinbouw die als flexi-medewerker of als zelfstandige wil meewerken aan tuinontwerp, tuinaanleg,
+          tuinonderhoud en grondwerken. Geen los project hier en daar, maar een vaste samenwerking met hetzelfde
+          team.
+        </p>
+
+        <h2>Wat verwacht Mani Verdi van u?</h2>
+        <ul class="plain">
+          <li>Ervaring in de tuinbouw of tuinaanleg, als arbeider of als zelfstandige</li>
+          <li>Vertrouwd met bestrating, beplanting en grondwerk, of bereid om dat snel te leren</li>
+          <li>Zin om mee te werken in een klein team met korte lijnen</li>
+          <li>Rijbewijs B is een pluspunt</li>
+        </ul>
+
+        <h2>Wat biedt Mani Verdi?</h2>
+        <p>
+          Een flexibele samenwerking, afgestemd op wat voor u haalbaar is: als flexi-job naast een ander
+          statuut, of als zelfstandige onderaannemer met een vast aanspreekpunt. U werkt op projecten in Hasselt
+          en de bredere regio Haspengouw, met professioneel materiaal en een team dat al jaren dezelfde klanten
+          bedient.
+        </p>
+
+        <h2>Interesse?</h2>
+        <p>
+          Mail uw gegevens en een korte omschrijving van uw ervaring naar
+          <a href={`mailto:${site.email}?subject=Sollicitatie%20tuinman`}>{site.email}</a>. Mani Verdi neemt
+          persoonlijk contact met u op om de mogelijkheden te bespreken.
+        </p>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

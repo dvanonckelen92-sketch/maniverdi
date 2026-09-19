@@ -1,0 +1,101 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Header from "../../../components/Header.astro";
+import Hero from "../../../components/Hero.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import Faq from "../../../components/Faq.astro";
+import Cta from "../../../components/Cta.astro";
+import Footer from "../../../components/Footer.astro";
+import { blogPosts } from "../../../data/blog";
+import { blogPostingSchema, faqSchema } from "../../../data/schema";
+
+const post = blogPosts.find((p) => p.slug === "stormschade-tuin-hasselt")!;
+
+const faqItems = [
+  {
+    q: "Vergoedt mijn verzekering stormschade aan mijn tuin?",
+    a: "Veel woonverzekeringen met een stormdekking vergoeden schade aan vaste tuinelementen zoals een schutting, tuinhuis of terras, maar niet altijd schade aan planten en gazon. Controleer uw polis en neem contact op met uw verzekeraar voor u laat herstellen.",
+  },
+  {
+    q: "Hoe snel moet ik stormschade in mijn tuin laten herstellen?",
+    a: "Een omgewaaide boom of losliggende bestrating herstelt u best snel, zeker als het een veiligheidsrisico vormt of de schade kan verergeren bij regen. Voor puur esthetisch herstel, zoals een beschadigde border, kunt u wachten tot een rustiger moment.",
+  },
+  {
+    q: "Kan Mani Verdi ook een schadedossier voor de verzekering opmaken?",
+    a: "Mani Verdi maakt bij een werfbezoek een duidelijke offerte met omschrijving van de schade en de werken, die u zelf bij uw verzekeraar kunt indienen als bewijsstuk.",
+  },
+];
+
+const breadcrumbs = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+  { name: post.title, path: `/blog/${post.slug}/` },
+];
+---
+<Layout
+  title={`${post.title} | Mani Verdi`}
+  description={post.seoDescription}
+  path={`/blog/${post.slug}/`}
+  image={post.image}
+  breadcrumbs={breadcrumbs}
+  jsonLd={[blogPostingSchema(post), faqSchema(faqItems)]}
+>
+  <Header />
+  <main id="top">
+    <Hero
+      eyebrow="Blog · Hasselt"
+      title={post.title}
+      lede={post.excerpt}
+      bgImage={post.image}
+      bgAlt={post.imageAlt}
+      compact
+    />
+    <Breadcrumbs items={breadcrumbs} />
+    <section class="page-content blog-post">
+      <div class="wrap">
+        <p class="blog-meta">Gepubliceerd op {post.dateDisplay} · Mani Verdi</p>
+
+        <p>
+          Na een storm staat een tuin in Hasselt er soms van de ene op de andere dag helemaal anders bij: een
+          omgewaaide boom, een verzakt stuk bestrating of een haag die half is platgeslagen. <strong>Stormschade
+          in uw tuin</strong> herstelt u het best in een vaste volgorde, zodat u niets over het hoofd ziet en geen
+          onnodige risico's neemt.
+        </p>
+
+        <h2>Wat doet u eerst bij stormschade in uw tuin?</h2>
+        <p>
+          Loop de tuin pas rond als het rustig weer is en let op losse takken die nog kunnen vallen. Kom niet in de
+          buurt van omgewaaide bomen of takken die in de buurt van elektriciteitskabels liggen: bel daarvoor de
+          hulpdiensten of netbeheerder. Maak voor u iets opruimt foto's van de schade, dat heeft u nodig voor uw
+          verzekering.
+        </p>
+
+        <h2>Wanneer belt u een vakman, wanneer wacht u?</h2>
+        <p>
+          Een ontwortelde boom, een verzakt terras of een beschadigde omheining vraagt om professioneel grondwerk en
+          is geen klus om zelf aan te pakken. Kleinere schade, zoals afgebroken takken op het gazon of een paar
+          losse tegels, kunt u zelf opruimen tot er tijd is voor herstel.
+        </p>
+
+        <h2>Wat kan Mani Verdi voor u doen na stormschade?</h2>
+        <p>
+          Mani Verdi ruimt omgewaaide bomen en takken op, herstelt verzakte grond met
+          <a href="/grondwerken-hasselt/">grondwerken</a>, legt beschadigde bestrating opnieuw aan via
+          <a href="/tuinaanleg-hasselt/">tuinaanleg</a>, en verzorgt hagen en gazon die averij hebben opgelopen met
+          <a href="/tuinonderhoud-hasselt/">tuinonderhoud</a>. Bij een gratis werfbezoek in Hasselt en omgeving
+          bekijkt Mani Verdi de schade en bespreekt hij samen met u wat prioriteit heeft.
+        </p>
+
+        <h2>Dekt uw verzekering stormschade aan de tuin?</h2>
+        <p>
+          Dat hangt af van uw polis: vaste constructies zoals een schutting, tuinhuis of terras vallen vaak onder de
+          stormdekking van een woonverzekering, maar beplanting is dat niet altijd. Neem bij twijfel contact op met
+          uw verzekeraar voor u laat herstellen, en bewaar de foto's die u van de schade nam.
+        </p>
+      </div>
+    </section>
+    <Faq items={faqItems} />
+    <Cta />
+  </main>
+  <Footer />
+</Layout>

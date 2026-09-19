@@ -1,0 +1,87 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import Footer from "../../components/Footer.astro";
+import { site } from "../../data/site";
+
+const breadcrumbs = [
+  { name: "Home", path: "/" },
+  { name: "Privacyverklaring", path: "/privacyverklaring/" },
+];
+const lastUpdated = "18 september 2026";
+---
+<Layout
+  title="Privacyverklaring | Mani Verdi"
+  description="Lees hoe Mani Verdi omgaat met persoonsgegevens die worden verzameld via het offerteformulier, telefoon en e-mail, en welke rechten u als bezoeker heeft."
+  path="/privacyverklaring/"
+  breadcrumbs={breadcrumbs}
+>
+  <Header />
+  <main id="top">
+    <div style="height:24px"></div>
+    <Breadcrumbs items={breadcrumbs} />
+    <section class="page-content">
+      <div class="wrap">
+        <h1 style="font-size:clamp(28px,4vw,40px);margin-bottom:8px">Privacyverklaring</h1>
+        <p style="color:var(--ink-soft);margin-bottom:32px">Laatst bijgewerkt op {lastUpdated}.</p>
+
+        <h2>Wie is verantwoordelijk voor uw gegevens?</h2>
+        <p>
+          {site.name} {site.legalForm}, gevestigd in {site.address.postalCode} {site.address.addressLocality}
+          (ondernemingsnummer {site.companyNumber}), is verantwoordelijk voor de verwerking van persoonsgegevens
+          zoals beschreven in deze verklaring. Voor vragen over deze verklaring of over uw gegevens kunt u terecht
+          op <a href={`mailto:${site.email}`}>{site.email}</a> of via <a href={`tel:${site.phoneHref}`}>{site.phone}</a>.
+        </p>
+
+        <h2>Welke gegevens verzamelt Mani Verdi?</h2>
+        <p>
+          Via het offerteformulier op deze website verzamelt Mani Verdi de gegevens die u zelf invult: naam, adres,
+          e-mailadres, telefoonnummer, het gevraagde soort werk en uw regio, en eventueel een omschrijving van uw
+          project. Wanneer u in plaats daarvan telefonisch of via e-mail contact opneemt, ontvangt Mani Verdi de
+          gegevens die u dan zelf meedeelt. Formulierinzendingen worden verwerkt en opgeslagen door Netlify, de
+          hostingpartij van deze website.
+        </p>
+
+        <h2>Gebruikt deze website cookies of analytics?</h2>
+        <p>
+          Deze website wordt gehost bij Netlify en gebruikt Netlify's ingebouwde bezoekersstatistieken om te zien
+          hoeveel mensen de site bezoeken, via welke pagina's en vanwaar. Dat gebeurt op basis van serverlogs, niet
+          via een trackingcookie in uw browser, en de cijfers worden niet gebruikt om individuele bezoekers te
+          identificeren of te volgen over andere websites heen. Deze website plaatst zelf geen advertentiecookies of
+          social-mediapixels.
+        </p>
+
+        <h2>Waarvoor gebruikt Mani Verdi uw gegevens?</h2>
+        <p>
+          De gegevens die u via het formulier, telefonisch of per e-mail meedeelt, worden uitsluitend gebruikt om uw aanvraag te
+          beantwoorden, een werfbezoek in te plannen en een offerte op te maken. Mani Verdi verkoopt of verhuurt
+          deze gegevens nooit aan derden.
+        </p>
+
+        <h2>Hoe lang worden uw gegevens bewaard?</h2>
+        <p>
+          Contactgegevens van een aanvraag worden bewaard zolang dat nodig is om uw vraag te behandelen en, bij een
+          overeenkomst, zolang de wettelijke bewaartermijnen voor facturatie en boekhouding dat vereisen. Nadien
+          worden de gegevens verwijderd.
+        </p>
+
+        <h2>Wat zijn uw rechten?</h2>
+        <p>
+          U hebt het recht om inzage te vragen in de gegevens die Mani Verdi over u bewaart, om deze te laten
+          corrigeren of verwijderen, en om bezwaar te maken tegen de verwerking ervan. U kunt dit aanvragen via
+          <a href={`mailto:${site.email}`}>{site.email}</a>. Meent u dat uw gegevens niet correct worden verwerkt,
+          dan kunt u een klacht indienen bij de Belgische Gegevensbeschermingsautoriteit
+          (<a href="https://www.gegevensbeschermingsautoriteit.be" target="_blank" rel="noopener">gegevensbeschermingsautoriteit.be</a>).
+        </p>
+
+        <h2>Wijzigingen aan deze verklaring</h2>
+        <p>
+          Mani Verdi kan deze privacyverklaring aanpassen wanneer de manier van gegevensverwerking wijzigt. De
+          datum bovenaan deze pagina geeft aan wanneer de verklaring voor het laatst is bijgewerkt.
+        </p>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

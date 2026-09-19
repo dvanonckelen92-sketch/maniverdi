@@ -1,0 +1,22 @@
+---
+import { services as allServices } from "../data/site";
+interface Props {
+  exclude: string;
+  heading?: string;
+}
+const { exclude, heading = "Andere diensten" } = Astro.props;
+const items = allServices.filter((s) => s.slug !== exclude);
+---
+<section class="related-services">
+  <div class="wrap">
+    <h2>{heading}</h2>
+    <div class="related-grid">
+      {items.map((s) => (
+        <a class="related-card" href={`/${s.slug}/`}>
+          <img src={s.image} alt={s.imageAlt} loading="lazy" />
+          <span>{s.navLabel}</span>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>

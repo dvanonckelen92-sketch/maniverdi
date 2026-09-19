@@ -1,0 +1,114 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Hero from "../../components/Hero.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import RelatedServices from "../../components/RelatedServices.astro";
+import Faq from "../../components/Faq.astro";
+import Cta from "../../components/Cta.astro";
+import Footer from "../../components/Footer.astro";
+import { services } from "../../data/site";
+import { faqSchema } from "../../data/schema";
+
+const service = services.find((s) => s.slug === "tuinaanleg-hasselt")!;
+const faqItems = [
+  {
+    q: "Wat kost tuinaanleg in Hasselt?",
+    a: "De prijs hangt af van de oppervlakte, het grondwerk en de gekozen materialen voor bestrating en beplanting. Na een gratis werfbezoek ontvangt u van Mani Verdi een offerte op maat, zonder verrassingen achteraf.",
+  },
+  {
+    q: "Hoe lang duurt de aanleg van een tuin?",
+    a: "Een gemiddelde particuliere tuin in Hasselt duurt, afhankelijk van omvang en grondwerk, twee tot vier weken. Bij het werfbezoek geeft Mani Verdi een concrete planning voor uw project.",
+  },
+];
+const breadcrumbs = [
+  { name: "Home", path: "/" },
+  { name: "Tuinaanleg Hasselt", path: "/tuinaanleg-hasselt/" },
+];
+---
+<Layout
+  title="Tuinaanleg Hasselt | Mani Verdi"
+  description={service.seoDescription}
+  path="/tuinaanleg-hasselt/"
+  image={service.image}
+  breadcrumbs={breadcrumbs}
+  jsonLd={[faqSchema(faqItems)]}
+>
+  <Header />
+  <main id="top">
+    <Hero
+      eyebrow="Dienst · Hasselt"
+      title="Tuinaanleg Hasselt"
+      lede={service.heroLede}
+      bgImage={service.image}
+      bgAlt={service.imageAlt}
+      primaryLabel="Gratis werfbezoek aanvragen"
+      primaryHref="/contact/"
+      compact
+    />
+    <Breadcrumbs items={breadcrumbs} />
+    <section class="page-content">
+      <div class="wrap">
+        <h2>Tuinaanleg in Hasselt van grondwerk tot laatste plant</h2>
+        <p>
+          Tuinaanleg in Hasselt vraagt om meer dan bestrating en planten: de bodem in en rond Hasselt varieert van
+          zware klei tot zandleem, en dat bepaalt hoe funderingen, drainage en beplanting aangepakt worden. Mani
+          Verdi start elk project met een werfbezoek waarbij grondsoort en waterhuishouding bekeken worden, voor er
+          een offerte volgt.
+        </p>
+        <p>
+          Voor projecten die eerst grondverzet of afbraak van oude verhardingen vereisen, gebeuren die
+          <a href="/grondwerken-hasselt/">grondwerken</a> door hetzelfde team, zodat er geen tweede aannemer nodig is
+          en de planning in eigen hand blijft.
+        </p>
+
+        <h2>Bestrating, beplanting en verlichting</h2>
+        <p>
+          De aanleg zelf omvat grondwerk en egalisatie, bestrating in klinkers, natuursteen of gietvloer naar keuze,
+          beplanting afgestemd op bezonning en onderhoudsniveau, en waar gewenst tuinverlichting. Elk onderdeel wordt
+          uitgevoerd met professionele machines, wat het verschil maakt in afwerking en snelheid tegenover
+          handmatig werk.
+        </p>
+
+        <h2>Na de aanleg: onderhoud dat de investering beschermt</h2>
+        <p>
+          Een nieuw aangelegde tuin heeft in het eerste jaar extra zorg nodig: aanslaan van planten, bijsturen van
+          het gazon en eerste snoeibeurten. Mani Verdi biedt hiervoor <a href="/tuinonderhoud-hasselt/">tuinonderhoud</a>
+          aan, met hetzelfde team dat de tuin heeft aangelegd en dus elk detail kent.
+        </p>
+      </div>
+    </section>
+    <section class="page-content" style="padding-top:0">
+      <div class="wrap" style="max-width:1180px">
+        <h2>Voorbeelden van tuinaanleg</h2>
+        <div class="photo-grid">
+          <img src="/images/project-beton.jpg" alt="Nieuwe betonnen oprit in aanleg" loading="lazy" />
+          <img src="/images/project-terras.jpg" alt="Nieuw aangelegd terras met borders bij een woning" loading="lazy" />
+          <img src="/images/project-oprit.jpg" alt="Grindoprit bij een nieuwbouwwoning" loading="lazy" />
+          <img src="/images/project-pad.jpg" alt="Aangelegd wandelpad met houtsnippers tussen de bomen" loading="lazy" />
+          <img src="/images/project-bestrating.jpg" alt="Nieuwe bestrating in gebakken klinkers bij een woning" loading="lazy" />
+          <img src="/images/project-pad-plantvakken.jpg" alt="Aangelegd pad met plantvakken en grindafwerking" loading="lazy" />
+          <img src="/images/project-siergrassen.jpg" alt="Nieuw aangeplante siergrassen in een border" loading="lazy" />
+          <img src="/images/project-terras-border.jpg" alt="Aangelegd terras met plantenborder bij een woning" loading="lazy" />
+          <img src="/images/project-terras-visgraat.jpg" alt="Terras in visgraatpatroon aangelegd tegen de gevel" loading="lazy" />
+          <img src="/images/project-oprit-garage.jpg" alt="Bestrating in gebakken klinkers naar een garage" loading="lazy" />
+          <img src="/images/project-terras-boomspiegel.jpg" alt="Bestrating met ronde boomspiegel op een terras" loading="lazy" />
+          <img src="/images/project-kasseirand.jpg" alt="Kasseirand als afboording van een oprit" loading="lazy" />
+          <img src="/images/project-nieuwe-haag.jpg" alt="Pas aangeplante haag langs een oprit" loading="lazy" />
+          <img src="/images/project-koer.jpg" alt="Aangelegde koer in gebakken klinkers" loading="lazy" />
+          <img src="/images/project-waterplanten.jpg" alt="Aanplant van waterplanten langs een vijver" loading="lazy" />
+          <img src="/images/project-terraspad.jpg" alt="Grindterras aangelegd tegen een woning" loading="lazy" />
+          <img src="/images/project-gazon-park.jpg" alt="Gemaaid gazon met parkaanleg" loading="lazy" />
+          <img src="/images/werkfoto-gazonrand.jpg" alt="Medewerker van Mani Verdi legt een gazonrand aan" loading="lazy" />
+          <img src="/images/werkfoto-graszoden.jpg" alt="Graszoden klaar om gelegd te worden" loading="lazy" />
+          <img src="/images/project-van-werf.jpg" alt="Bedrijfswagen van Mani Verdi op een werf" loading="lazy" />
+          <img src="/images/project-van-plantvak.jpg" alt="Bedrijfswagen van Mani Verdi bij een nieuw plantvak" loading="lazy" />
+        </div>
+      </div>
+    </section>
+    <Faq items={faqItems} />
+    <RelatedServices exclude="tuinaanleg-hasselt" />
+    <Cta />
+  </main>
+  <Footer />
+</Layout>

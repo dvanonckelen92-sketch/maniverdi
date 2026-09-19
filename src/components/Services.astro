@@ -1,0 +1,26 @@
+---
+import { services } from "../data/site";
+---
+<section class="intro">
+  <div class="wrap intro-grid">
+    <h2>Onze diensten in Hasselt</h2>
+    <div class="intro-body">
+      <p>Met een grote passie voor tuinen, en met de nodige vakkennis en ervaring, vormen wij de basis voor uw tuinrealisatie. Wij werken met professionele machines en duurzame materialen, zo geven wij uw tuin de meerwaarde die hij verdient met een tijdloze uitstraling om jarenlang van te genieten.</p>
+      <p>Wij verzorgen voor u het ontwerp, de aanleg en/of het onderhoud van uw tuin volgens uw persoonlijke wensen, met één vast aanspreekpunt van begin tot einde.</p>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="diensten">
+  <div class="wrap service-grid">
+    {services.map((s) => (
+      <a class="service-card" href={`/${s.slug}/`}>
+        <img src={s.image} alt={s.imageAlt} />
+        <div class="service-card-text">
+          <h3>{s.navLabel}</h3>
+          <p>{s.heroLede.slice(0, 70)}…</p>
+        </div>
+      </a>
+    ))}
+  </div>
+</section>

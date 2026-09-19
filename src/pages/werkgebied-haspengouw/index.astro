@@ -1,0 +1,62 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Hero from "../../components/Hero.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import Cta from "../../components/Cta.astro";
+import Footer from "../../components/Footer.astro";
+import { towns } from "../../data/site";
+
+const breadcrumbs = [
+  { name: "Home", path: "/" },
+  { name: "Werkgebied", path: "/werkgebied-haspengouw/" },
+];
+---
+<Layout
+  title="Tuinaannemer Haspengouw | Werkgebied Mani Verdi"
+  description="Mani Verdi is gevestigd in Hasselt en werkt er als tuinaannemer, en in de regio Haspengouw: Kermt, Kuringen, Diepenbeek, Zonhoven, Sint-Truiden en Genk."
+  path="/werkgebied-haspengouw/"
+  breadcrumbs={breadcrumbs}
+>
+  <Header />
+  <main id="top">
+    <Hero
+      eyebrow="Werkgebied"
+      title="Tuinaannemer in heel Haspengouw"
+      lede="Vanuit Hasselt rijdt Mani Verdi dagelijks uit naar tuinen in de stad en de bredere regio Haspengouw."
+      bgImage="/images/hero.jpg"
+      bgAlt="Tuin verzorgd door Mani Verdi in de regio Haspengouw"
+      compact
+    />
+    <Breadcrumbs items={breadcrumbs} />
+    <section class="page-content">
+      <div class="wrap">
+        <h2>Gevestigd in Hasselt, actief in heel de stad</h2>
+        <p>
+          Mani Verdi is gevestigd in Hasselt. Vanuit die locatie is elke deelgemeente binnen enkele minuten
+          bereikbaar, wat toelaat om ook op korte termijn langs te komen voor een werfbezoek in Hasselt-centrum
+          of een van de deelgemeenten.
+        </p>
+
+        <h2>Deelgemeenten van Hasselt</h2>
+        <p>
+          Mani Verdi werkt geregeld in Kermt, Kuringen, Wimmertingen en Runkst: elk met hun eigen mix van oudere
+          verkavelingen en nieuwbouw, en dus elk met een andere aanpak voor grondwerk en beplanting.
+        </p>
+
+        <h2>Regio Haspengouw en verder</h2>
+        <p>
+          Buiten Hasselt zelf rijdt Mani Verdi uit naar Diepenbeek, Zonhoven, Herk-de-Stad, Sint-Truiden en Genk.
+          Deze lijst is niet in steen gebeiteld: het werkgebied breidt uit naarmate er meer projecten bijkomen.
+          Staat uw gemeente er niet bij, bel of mail dan gerust om te horen of een werfbezoek haalbaar is.
+        </p>
+        <div class="area-tags" style="margin-top:20px">
+          {towns.map((t) => <span class={t === "Hasselt" ? "hq" : ""}>{t}</span>)}
+          <span>en verder op aanvraag</span>
+        </div>
+      </div>
+    </section>
+    <Cta />
+  </main>
+  <Footer />
+</Layout>

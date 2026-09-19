@@ -1,0 +1,17 @@
+export const pages = [
+  { path: "/", lastmod: "2026-09-18", priority: "1.0" },
+  { path: "/tuinontwerp-hasselt/", lastmod: "2026-09-18", priority: "0.9" },
+  { path: "/tuinaanleg-hasselt/", lastmod: "2026-09-18", priority: "0.9" },
+  { path: "/tuinonderhoud-hasselt/", lastmod: "2026-09-18", priority: "0.9" },
+  { path: "/grondwerken-hasselt/", lastmod: "2026-09-18", priority: "0.9" },
+  { path: "/rioleringswerken-hasselt/", lastmod: "2026-09-18", priority: "0.9" },
+  { path: "/werkgebied-haspengouw/", lastmod: "2026-09-18", priority: "0.7" },
+  { path: "/realisaties/", lastmod: "2026-09-18", priority: "0.7" },
+  { path: "/over-ons/", lastmod: "2026-09-18", priority: "0.7" },
+  { path: "/veelgestelde-vragen/", lastmod: "2026-09-18", priority: "0.6" },
+  { path: "/contact/", lastmod: "2026-09-18", priority: "0.8" },
+  { path: "/blog/", lastmod: "2026-09-18", priority: "0.6" },
+  { path: "/blog/stormschade-tuin-hasselt/", lastmod: "2026-09-18", priority: "0.6" },
+  { path: "/vacatures/", lastmod: "2026-09-18", priority: "0.4" },
+  { path: "/privacyverklaring/", lastmod: "2026-09-18", priority: "0.2" },
+] as const;

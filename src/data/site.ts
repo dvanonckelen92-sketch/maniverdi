@@ -1,0 +1,141 @@
+export const site = {
+  name: "Mani Verdi",
+  tagline: "Tuinen & landschappen",
+  phone: "+32 471 56 71 42",
+  phoneHref: "+32471567142",
+  email: "tuinen@maniverdi.be",
+  url: "https://maniverdi.be",
+  legalForm: "BV",
+  companyNumber: "BE0788.616.730",
+  address: {
+    addressLocality: "Hasselt",
+    postalCode: "3500",
+    addressRegion: "Limburg",
+    addressCountry: "BE",
+  },
+  geo: { latitude: 50.9394, longitude: 5.2764 },
+  openingHours: { days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], opens: "08:00", closes: "18:00" },
+  openingHoursText: "Maandag tot vrijdag, 08:00 tot 18:00 uur",
+  priceRange: "€€",
+  social: {
+    facebook: "https://www.facebook.com/p/Mani-Verdi-100085234217485/",
+    instagram: "https://www.instagram.com/mani.verdi/",
+    whatsapp: "https://wa.me/32471567142",
+  },
+  builtBy: {
+    name: "Coop Consult",
+    url: "https://coopconsult.be",
+  },
+} as const;
+
+export const towns = [
+  "Hasselt",
+  "Kermt",
+  "Kuringen",
+  "Wimmertingen",
+  "Runkst",
+  "Diepenbeek",
+  "Zonhoven",
+  "Herk-de-Stad",
+  "Sint-Truiden",
+  "Genk",
+] as const;
+
+export type Service = {
+  slug: string;
+  keyword: string;
+  navLabel: string;
+  title: string;
+  seoDescription: string;
+  heroLede: string;
+  image: string;
+  imageAlt: string;
+};
+
+export const services: Service[] = [
+  {
+    slug: "tuinontwerp-hasselt",
+    keyword: "tuinontwerp Hasselt",
+    navLabel: "Tuinontwerp",
+    title: "Tuinontwerp Hasselt",
+    seoDescription:
+      "Tuinontwerp in Hasselt op maat van uw perceel, grondsoort en gezin. Mani Verdi tekent een tuinplan en legt het nadien ook zelf aan.",
+    heroLede:
+      "Een tuinplan dat rekening houdt met bezonning, grondsoort en hoe u de tuin écht gebruikt, opgemaakt door hetzelfde team dat de aanleg nadien uitvoert.",
+    image: "/images/tuinontwerp.jpg",
+    imageAlt: "3D-tuinontwerp met houten pergola, loungehoek en terras, getekend door Mani Verdi",
+  },
+  {
+    slug: "tuinaanleg-hasselt",
+    keyword: "tuinaanleg Hasselt",
+    navLabel: "Tuinaanleg",
+    title: "Tuinaanleg Hasselt",
+    seoDescription:
+      "Tuinaanleg in Hasselt: bestrating, beplanting en verlichting vakkundig uitgevoerd door Mani Verdi. Gratis werfbezoek en offerte op maat.",
+    heroLede:
+      "Van grondwerk tot de laatste plant: Mani Verdi legt tuinen aan in Hasselt en omgeving met professionele machines en duurzame materialen.",
+    image: "/images/tuinaanleg.jpg",
+    imageAlt: "Afgewerkt tuinaanlegproject met grindoprit bij een woning in Hasselt",
+  },
+  {
+    slug: "tuinonderhoud-hasselt",
+    keyword: "tuinonderhoud Hasselt",
+    navLabel: "Tuinonderhoud",
+    title: "Tuinonderhoud Hasselt",
+    seoDescription:
+      "Tuinonderhoud in Hasselt: snoeiwerk, gazononderhoud en een vast onderhoudsplan het hele jaar door, door hetzelfde team als bij de aanleg.",
+    heroLede:
+      "Een tuin blijft maar mooi met regelmatig onderhoud. Mani Verdi verzorgt snoei, gazon en seizoenswerk in Hasselt en omgeving, het hele jaar door.",
+    image: "/images/hagen.jpg",
+    imageAlt: "Strak gesnoeide hagen bij een woning in Hasselt",
+  },
+  {
+    slug: "grondwerken-hasselt",
+    keyword: "grondwerken Hasselt",
+    navLabel: "Grond- & afbraakwerken",
+    title: "Grondwerken Hasselt",
+    seoDescription:
+      "Grondwerken en afbraakwerken in Hasselt als stevige basis voor uw tuinproject. Grondverzet, afvoer en egalisatie door Mani Verdi.",
+    heroLede:
+      "Voor elk tuinproject dat begint bij nul: grondverzet, afbraak van oude verhardingen en egalisatie, uitgevoerd met professionele machines.",
+    image: "/images/grondwerken.jpg",
+    imageAlt: "Grond- en afbraakwerken als basis voor een nieuw tuinproject",
+  },
+  {
+    slug: "rioleringswerken-hasselt",
+    keyword: "rioleringswerken Hasselt",
+    navLabel: "Rioleringswerken",
+    title: "Rioleringswerken Hasselt",
+    seoDescription:
+      "Rioleringswerken in Hasselt bij tuinaanleg of renovatie: aansluiting, afkoppeling en herstel, uitgevoerd door Mani Verdi.",
+    heroLede:
+      "Bij een tuinrenovatie komt de riolering vaak mee aan de beurt. Mani Verdi legt en herstelt rioleringen als onderdeel van het grondwerk.",
+    image: "/images/riolering.jpg",
+    imageAlt: "Graafwerk voor een rioleringsleiding in een tuin in Hasselt",
+  },
+];
+
+export type Faq = { q: string; a: string };
+
+export const faqs: Faq[] = [
+  {
+    q: "In welke regio werkt Mani Verdi?",
+    a: "Mani Verdi is gevestigd in Hasselt en werkt er, en in de omliggende gemeenten Kermt, Kuringen, Wimmertingen, Runkst, Diepenbeek, Zonhoven, Herk-de-Stad, Sint-Truiden en Genk.",
+  },
+  {
+    q: "Wat kost een tuin laten aanleggen in Hasselt?",
+    a: "De kostprijs hangt af van de oppervlakte, het grondwerk en de gekozen materialen. Na een gratis werfbezoek in Hasselt en omstreken ontvangt u van Mani Verdi een duidelijke offerte op maat.",
+  },
+  {
+    q: "Verzorgt Mani Verdi ook tuinonderhoud na de aanleg?",
+    a: "Ja, naast tuinontwerp en tuinaanleg biedt Mani Verdi ook doorlopend tuinonderhoud, grond- en afbraakwerken en rioleringswerken aan, zodat uw tuin in Hasselt jarenlang zijn tijdloze uitstraling behoudt.",
+  },
+  {
+    q: "Hoe snel kan Mani Verdi starten met mijn project?",
+    a: "Dat hangt af van het seizoen en de omvang van het werk. Bij het gratis werfbezoek krijgt u een realistische inschatting van de planning voor uw tuin in Hasselt of omgeving.",
+  },
+  {
+    q: "Werkt Mani Verdi ook buiten Hasselt?",
+    a: "Ja. Vanuit Hasselt rijdt Mani Verdi dagelijks uit naar de deelgemeenten en de bredere regio Haspengouw, tot in Sint-Truiden en Genk.",
+  },
+];

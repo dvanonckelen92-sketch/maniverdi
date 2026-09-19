@@ -1,0 +1,21 @@
+---
+import type { Faq } from "../data/site";
+interface Props {
+  items: Faq[];
+  heading?: string;
+}
+const { items, heading = "Veelgestelde vragen" } = Astro.props;
+---
+<section class="faq" id="faq">
+  <div class="wrap">
+    <h2>{heading}</h2>
+    <div class="faq-list">
+      {items.map((f) => (
+        <div class="faq-item">
+          <h3>{f.q}</h3>
+          <p>{f.a}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

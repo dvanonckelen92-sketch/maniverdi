@@ -1,0 +1,72 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Hero from "../../components/Hero.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import Cta from "../../components/Cta.astro";
+import Footer from "../../components/Footer.astro";
+
+const breadcrumbs = [
+  { name: "Home", path: "/" },
+  { name: "Over ons", path: "/over-ons/" },
+];
+---
+<Layout
+  title="Over Mani Verdi | Tuinaannemer Hasselt"
+  description="Mani Verdi is een tuinaannemer gevestigd in Hasselt, actief in de hele regio Haspengouw. Eén aanspreekpunt van ontwerp tot onderhoud."
+  path="/over-ons/"
+  breadcrumbs={breadcrumbs}
+>
+  <Header />
+  <main id="top">
+    <Hero
+      eyebrow="Over ons"
+      title="Waar groen tot leven komt"
+      lede="Ons team van tuinexperts staat klaar om uw dromen werkelijkheid te maken, met vakkennis die is opgebouwd rond Hasselt."
+      bgImage="/images/tuin-bloesem.jpg"
+      bgAlt="Aangelegde tuin met bloesemboom en terras van Mani Verdi"
+      compact
+    />
+    <Breadcrumbs items={breadcrumbs} />
+    <section class="page-content">
+      <div class="wrap">
+        <div class="about-photos">
+          <img src="/images/team-van.jpg" alt="Bedrijfswagen van Mani Verdi op een werf in Hasselt" loading="lazy" />
+          <img src="/images/team-diner.jpg" alt="Het team van Mani Verdi samen aan tafel" loading="lazy" />
+        </div>
+
+        <h2>Lokale kennis van de streek</h2>
+        <p>
+          Mani Verdi is gevestigd in Hasselt en werkt van daaruit in de hele regio. Die lokale basis betekent
+          vertrouwdheid met de bodem, het klimaat en de bouwstijlen rond Hasselt: van
+          klei tot zandleem, en van oudere verkavelingen tot nieuwbouwwijken.
+        </p>
+
+        <h2>Eén aanspreekpunt van schets tot onderhoud</h2>
+        <p>
+          Een tuinproject dat van hand wisselt tussen ontwerper, aannemer en onderhoudsploeg verliest onderweg vaak
+          details. Bij Mani Verdi blijft hetzelfde team betrokken van het eerste gesprek over
+          <a href="/tuinontwerp-hasselt/">tuinontwerp</a>, over de <a href="/tuinaanleg-hasselt/">aanleg</a>, tot het
+          jarenlange <a href="/tuinonderhoud-hasselt/">onderhoud</a> nadien.
+        </p>
+
+        <h2>Duurzame materialen die standhouden</h2>
+        <p>
+          De keuze van materialen weegt zwaarder dan de eerste indruk: een terras of oprit gaat pas jaren mee als
+          de ondergrond, de afwatering en de gebruikte producten kloppen. Mani Verdi kiest daarom bewust voor
+          materialen en technieken die ook na tien jaar nog standhouden, ook als dat een iets hogere investering
+          vraagt dan de goedkoopste optie.
+        </p>
+
+        <h2>Werkwijze</h2>
+        <p>
+          Elk project start met een gratis en vrijblijvend werfbezoek. Daarna volgt een duidelijke offerte op maat,
+          zonder verborgen kosten. Pas na uw akkoord gaat Mani Verdi aan de slag, met een planning die vooraf
+          besproken is.
+        </p>
+      </div>
+    </section>
+    <Cta />
+  </main>
+  <Footer />
+</Layout>

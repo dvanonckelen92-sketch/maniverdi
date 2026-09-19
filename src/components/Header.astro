@@ -1,0 +1,49 @@
+---
+import { services, site } from "../data/site";
+---
+<header>
+  <div class="wrap header-row">
+    <a class="logo" href="/">
+      <img class="mark" src="/images/logo-mark-transparent.png" alt="" width="22" height="22" />
+      {site.name} <span>{site.tagline}</span>
+    </a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+    <label for="nav-toggle" class="nav-burger" aria-label="Menu openen">
+      <span></span><span></span><span></span>
+    </label>
+    <nav class="primary" aria-label="Hoofdmenu">
+      <details class="nav-dropdown">
+        <summary>
+          Diensten
+          <svg class="chev" viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </summary>
+        <ul>
+          {services.map((s) => (
+            <li><a href={`/${s.slug}/`}>{s.navLabel}</a></li>
+          ))}
+        </ul>
+      </details>
+      <a href="/realisaties/">Realisaties</a>
+      <a href="/werkgebied-haspengouw/">Werkgebied</a>
+      <a href="/blog/">Blog</a>
+      <a href="/over-ons/">Over ons</a>
+      <a href="/contact/" class="btn">Offerte aanvragen</a>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const hoverCapable = window.matchMedia("(hover: hover) and (pointer: fine)");
+  document.querySelectorAll<HTMLDetailsElement>(".nav-dropdown").forEach((el) => {
+    let closeTimer: ReturnType<typeof setTimeout>;
+    el.addEventListener("mouseenter", () => {
+      if (!hoverCapable.matches) return;
+      clearTimeout(closeTimer);
+      el.open = true;
+    });
+    el.addEventListener("mouseleave", () => {
+      if (!hoverCapable.matches) return;
+      closeTimer = setTimeout(() => { el.open = false; }, 180);
+    });
+  });
+</script>

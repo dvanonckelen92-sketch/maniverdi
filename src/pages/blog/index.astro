@@ -1,0 +1,50 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Hero from "../../components/Hero.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import Cta from "../../components/Cta.astro";
+import Footer from "../../components/Footer.astro";
+import { blogPosts } from "../../data/blog";
+
+const breadcrumbs = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog/" },
+];
+---
+<Layout
+  title="Tuinblog Hasselt | Tips & nieuws van Mani Verdi"
+  description="Tips en nieuws over tuinaanleg, tuinontwerp en tuinonderhoud in Hasselt, geschreven door Mani Verdi: van stormschade herstellen tot seizoensadvies voor uw tuin."
+  path="/blog/"
+  breadcrumbs={breadcrumbs}
+>
+  <Header />
+  <main id="top">
+    <Hero
+      eyebrow="Blog"
+      title="Tips over uw tuin in Hasselt"
+      lede="Praktische artikels over tuinaanleg, onderhoud en actuele situaties zoals stormschade, geschreven door Mani Verdi."
+      bgImage="/images/hero.jpg"
+      bgAlt="Weelderig aangelegde tuin met slingerend gazonpad van Mani Verdi"
+      compact
+    />
+    <Breadcrumbs items={breadcrumbs} />
+    <section class="page-content" style="padding-top:0">
+      <div class="wrap" style="max-width:820px">
+        {blogPosts.map((post) => (
+          <a class="blog-card" href={`/blog/${post.slug}/`}>
+            <img src={post.image} alt={post.imageAlt} loading="lazy" />
+            <div>
+              <p class="blog-date">{post.dateDisplay}</p>
+              <h2>{post.title}</h2>
+              <p>{post.excerpt}</p>
+              <span class="blog-readmore">Lees verder</span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </section>
+    <Cta />
+  </main>
+  <Footer />
+</Layout>

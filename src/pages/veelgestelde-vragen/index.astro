@@ -1,0 +1,39 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Hero from "../../components/Hero.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import Faq from "../../components/Faq.astro";
+import Cta from "../../components/Cta.astro";
+import Footer from "../../components/Footer.astro";
+import { faqs } from "../../data/site";
+import { faqSchema } from "../../data/schema";
+
+const breadcrumbs = [
+  { name: "Home", path: "/" },
+  { name: "Veelgestelde vragen", path: "/veelgestelde-vragen/" },
+];
+---
+<Layout
+  title="Veelgestelde vragen | Mani Verdi Hasselt"
+  description="Antwoorden op veelgestelde vragen over tuinaanleg, tuinontwerp en tuinonderhoud bij Mani Verdi in Hasselt en omgeving."
+  path="/veelgestelde-vragen/"
+  breadcrumbs={breadcrumbs}
+  jsonLd={[faqSchema(faqs)]}
+>
+  <Header />
+  <main id="top">
+    <Hero
+      eyebrow="Veelgestelde vragen"
+      title="Antwoorden op uw vragen"
+      lede="Een overzicht van de vragen die Mani Verdi het vaakst krijgt over tuinaanleg, onderhoud en het werkgebied rond Hasselt."
+      bgImage="/images/hero.jpg"
+      bgAlt="Weelderig aangelegde tuin met slingerend gazonpad van Mani Verdi"
+      compact
+    />
+    <Breadcrumbs items={breadcrumbs} />
+    <Faq items={faqs} heading="Alle vragen" />
+    <Cta />
+  </main>
+  <Footer />
+</Layout>

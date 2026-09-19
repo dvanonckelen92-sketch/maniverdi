@@ -1,0 +1,109 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Hero from "../../components/Hero.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import Footer from "../../components/Footer.astro";
+import { site, services, towns } from "../../data/site";
+
+const breadcrumbs = [
+  { name: "Home", path: "/" },
+  { name: "Contact", path: "/contact/" },
+];
+---
+<Layout
+  title="Offerte tuinaanleg Hasselt | Mani Verdi"
+  description="Vraag een gratis werfbezoek en offerte tuinaanleg aan bij Mani Verdi in Hasselt. Bel, mail of vul het offerteformulier in."
+  path="/contact/"
+  breadcrumbs={breadcrumbs}
+>
+  <Header />
+  <main id="top">
+    <Hero
+      eyebrow="Contact"
+      title="Offerte tuinaanleg Hasselt"
+      lede="Plan een gratis en vrijblijvend werfbezoek en ontvang een offerte op maat van uw tuin."
+      bgImage="/images/hero.jpg"
+      bgAlt="Weelderig aangelegde tuin met slingerend gazonpad van Mani Verdi"
+      primaryLabel={`Bel ${site.phone}`}
+      primaryHref={`tel:${site.phoneHref}`}
+      secondaryLabel={site.email}
+      secondaryHref={`mailto:${site.email}`}
+      compact
+    />
+    <Breadcrumbs items={breadcrumbs} />
+    <section class="page-content">
+      <div class="wrap contact-grid">
+        <div>
+          <h2>Zo verloopt een aanvraag</h2>
+          <p>
+            Vul het offerteformulier in of bel of mail met een korte omschrijving van uw project. Mani Verdi plant
+            een gratis werfbezoek in Hasselt of de ruime omgeving, bekijkt de situatie ter plaatse en
+            bespreekt uw wensen en budget. Daarna ontvangt u een duidelijke offerte, zonder verborgen kosten.
+          </p>
+
+          <h2>Contactgegevens</h2>
+          <ul class="plain">
+            <li>Telefoon: <a href={`tel:${site.phoneHref}`}>{site.phone}</a></li>
+            <li>E-mail: <a href={`mailto:${site.email}`}>{site.email}</a></li>
+            <li>Regio: {site.address.postalCode} {site.address.addressLocality}</li>
+            <li>Bereikbaar: {site.openingHoursText}</li>
+          </ul>
+        </div>
+
+        <div class="quote-form-wrap">
+          <h2>Offerte aanvragen</h2>
+          <form
+            name="offerte-aanvraag"
+            method="POST"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+            action="/contact/bedankt/"
+            class="quote-form"
+          >
+            <input type="hidden" name="form-name" value="offerte-aanvraag" />
+            <p class="hp-field">
+              <label>Niet invullen: <input name="bot-field" tabindex="-1" autocomplete="off" /></label>
+            </p>
+
+            <label for="naam">Naam</label>
+            <input id="naam" name="naam" type="text" required autocomplete="name" />
+
+            <label for="adres">Adres</label>
+            <input id="adres" name="adres" type="text" required autocomplete="street-address" placeholder="Straat, nummer, postcode, gemeente" />
+
+            <label for="email">E-mailadres</label>
+            <input id="email" name="email" type="email" required autocomplete="email" />
+
+            <label for="telefoon">Telefoonnummer</label>
+            <input id="telefoon" name="telefoon" type="tel" required autocomplete="tel" />
+
+            <label for="soort-werk">Soort werk</label>
+            <select id="soort-werk" name="soort-werk" required>
+              <option value="" selected disabled>Kies een dienst</option>
+              {services.map((s) => <option value={s.navLabel}>{s.navLabel}</option>)}
+              <option value="Anders">Anders / nog niet zeker</option>
+            </select>
+
+            <label for="regio">Regio</label>
+            <select id="regio" name="regio" required>
+              <option value="" selected disabled>Kies uw gemeente</option>
+              {towns.map((t) => <option value={t}>{t}</option>)}
+              <option value="Andere gemeente">Andere gemeente</option>
+            </select>
+
+            <label for="bericht">Omschrijving van uw project (optioneel)</label>
+            <textarea id="bericht" name="bericht" rows="4"></textarea>
+
+            <button type="submit" class="btn">Offerte aanvragen</button>
+            <p class="form-consent">
+              Door dit formulier te versturen gaat u akkoord met onze <a href="/privacyverklaring/">privacyverklaring</a>.
+              Mani Verdi gebruikt uw gegevens uitsluitend om uw aanvraag te behandelen.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>
