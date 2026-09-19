@@ -1,0 +1,64 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Hero from "../../components/Hero.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import Cta from "../../components/Cta.astro";
+import Footer from "../../components/Footer.astro";
+import { towns } from "../../data/site";
+
+const breadcrumbs = [
+  { name: "Home", path: "/" },
+  { name: "Werkgebied", path: "/werkgebied-limburg/" },
+];
+---
+<Layout
+  title="Tuinaannemer Limburg | Werkgebied Mani Verdi"
+  description="Mani Verdi is gevestigd in Hasselt en werkt als tuinaannemer in heel Limburg, met Hasselt, Heusden-Zolder, Genk en Bilzen als belangrijkste werkgebieden."
+  path="/werkgebied-limburg/"
+  breadcrumbs={breadcrumbs}
+>
+  <Header />
+  <main id="top">
+    <Hero
+      eyebrow="Werkgebied"
+      title="Tuinaannemer in heel Limburg"
+      lede="Vanuit Hasselt rijdt Mani Verdi dagelijks uit naar tuinen in de hele provincie, met Hasselt, Heusden-Zolder, Genk en Bilzen als vaste werkgebieden."
+      bgImage="/images/hero.jpg"
+      bgAlt="Tuin verzorgd door Mani Verdi in Limburg"
+      compact
+    />
+    <Breadcrumbs items={breadcrumbs} />
+    <section class="page-content">
+      <div class="wrap">
+        <h2>Gevestigd in Hasselt, actief in heel Limburg</h2>
+        <p>
+          Mani Verdi is gevestigd in Hasselt. Vanuit die centrale locatie is de hele provincie Limburg
+          vlot bereikbaar, wat toelaat om ook op korte termijn langs te komen voor een werfbezoek, van
+          Hasselt-centrum tot de andere kant van de provincie.
+        </p>
+
+        <h2>Hasselt, Heusden-Zolder, Genk en Bilzen</h2>
+        <p>
+          Naast Hasselt zelf werkt Mani Verdi geregeld in Heusden-Zolder, Genk en Bilzen: telkens
+          gemeenten met een eigen mix van bodemtype en woningaanbod, en dus elk met een andere aanpak
+          voor grondwerk en beplanting.
+        </p>
+
+        <h2>De rest van Limburg</h2>
+        <p>
+          Daarnaast rijdt Mani Verdi uit naar Kermt, Kuringen, Wimmertingen, Runkst, Diepenbeek, Zonhoven,
+          Herk-de-Stad en Sint-Truiden. Deze lijst is niet in steen gebeiteld: het werkgebied breidt uit
+          naarmate er meer projecten bijkomen. Staat uw gemeente er niet bij, bel of mail dan gerust om te
+          horen of een werfbezoek haalbaar is.
+        </p>
+        <div class="area-tags" style="margin-top:20px">
+          {towns.map((t) => <span class={t === "Hasselt" ? "hq" : ""}>{t}</span>)}
+          <span>en verder op aanvraag</span>
+        </div>
+      </div>
+    </section>
+    <Cta />
+  </main>
+  <Footer />
+</Layout>

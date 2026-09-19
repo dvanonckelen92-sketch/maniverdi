@@ -5,7 +5,7 @@ export const pages = [
   { path: "/tuinonderhoud-hasselt/", lastmod: "2026-09-18", priority: "0.9" },
   { path: "/grondwerken-hasselt/", lastmod: "2026-09-18", priority: "0.9" },
   { path: "/rioleringswerken-hasselt/", lastmod: "2026-09-18", priority: "0.9" },
-  { path: "/werkgebied-haspengouw/", lastmod: "2026-09-18", priority: "0.7" },
+  { path: "/werkgebied-limburg/", lastmod: "2026-09-19", priority: "0.7" },
   { path: "/realisaties/", lastmod: "2026-09-18", priority: "0.7" },
   { path: "/over-ons/", lastmod: "2026-09-18", priority: "0.7" },
   { path: "/veelgestelde-vragen/", lastmod: "2026-09-18", priority: "0.6" },

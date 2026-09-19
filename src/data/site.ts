@@ -30,6 +30,9 @@ export const site = {
 
 export const towns = [
   "Hasselt",
+  "Genk",
+  "Bilzen",
+  "Heusden-Zolder",
   "Kermt",
   "Kuringen",
   "Wimmertingen",
@@ -38,7 +41,6 @@ export const towns = [
   "Zonhoven",
   "Herk-de-Stad",
   "Sint-Truiden",
-  "Genk",
 ] as const;
 
 export type Service = {
@@ -120,7 +122,7 @@ export type Faq = { q: string; a: string };
 export const faqs: Faq[] = [
   {
     q: "In welke regio werkt Mani Verdi?",
-    a: "Mani Verdi is gevestigd in Hasselt en werkt er, en in de omliggende gemeenten Kermt, Kuringen, Wimmertingen, Runkst, Diepenbeek, Zonhoven, Herk-de-Stad, Sint-Truiden en Genk.",
+    a: "Mani Verdi is gevestigd in Hasselt en werkt in heel Limburg, met Hasselt, Heusden-Zolder, Genk en Bilzen als belangrijkste werkgebieden, aangevuld met Kermt, Kuringen, Wimmertingen, Runkst, Diepenbeek, Zonhoven, Herk-de-Stad en Sint-Truiden.",
   },
   {
     q: "Wat kost een tuin laten aanleggen in Hasselt?",
@@ -136,6 +138,6 @@ export const faqs: Faq[] = [
   },
   {
     q: "Werkt Mani Verdi ook buiten Hasselt?",
-    a: "Ja. Vanuit Hasselt rijdt Mani Verdi dagelijks uit naar de deelgemeenten en de bredere regio Haspengouw, tot in Sint-Truiden en Genk.",
+    a: "Ja. Vanuit Hasselt rijdt Mani Verdi dagelijks uit naar tuinen in heel Limburg, met Heusden-Zolder, Genk en Bilzen als vaste werkgebieden naast Hasselt zelf.",
   },
 ];
