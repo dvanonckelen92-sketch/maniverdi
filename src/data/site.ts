@@ -130,7 +130,7 @@ export const faqs: Faq[] = [
   },
   {
     q: "Verzorgt Mani Verdi ook tuinonderhoud na de aanleg?",
-    a: "Ja, naast tuinontwerp en tuinaanleg biedt Mani Verdi ook doorlopend tuinonderhoud, grond- en afbraakwerken en rioleringswerken aan, zodat uw tuin in Hasselt jarenlang zijn tijdloze uitstraling behoudt.",
+    a: "Ja, naast tuinontwerp en tuinaanleg biedt Mani Verdi ook doorlopend tuinonderhoud, grond- en afbraakwerken en rioleringswerken aan, zodat uw tuin in Hasselt er ook jaren na de aanleg nog verzorgd bij ligt.",
   },
   {
     q: "Hoe snel kan Mani Verdi starten met mijn project?",
