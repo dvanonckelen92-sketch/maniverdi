@@ -2,6 +2,63 @@
   command = "npm run build"
   publish = "dist"
 
+# 301-redirects van de oude WordPress-site (maniverdi.be) naar de nieuwe URL's,
+# zodat geïndexeerde pagina's en oude links niet op een 404 uitkomen.
+[[redirects]]
+  from = "/diensten/"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/tuinontwerp/"
+  to = "/tuinontwerp-hasselt/"
+  status = 301
+
+[[redirects]]
+  from = "/tuinaanleg/"
+  to = "/tuinaanleg-hasselt/"
+  status = 301
+
+[[redirects]]
+  from = "/tuinonderhoud/"
+  to = "/tuinonderhoud-hasselt/"
+  status = 301
+
+[[redirects]]
+  from = "/rioleringswerken/"
+  to = "/rioleringswerken-hasselt/"
+  status = 301
+
+[[redirects]]
+  from = "/grond-afbraakwerken/"
+  to = "/grondwerken-hasselt/"
+  status = 301
+
+[[redirects]]
+  from = "/grond-en-afbraakwerken/"
+  to = "/grondwerken-hasselt/"
+  status = 301
+
+[[redirects]]
+  from = "/klinker-en-bestratingswerken/"
+  to = "/tuinaanleg-hasselt/"
+  status = 301
+
+[[redirects]]
+  from = "/totaalprojecten/"
+  to = "/realisaties/"
+  status = 301
+
+[[redirects]]
+  from = "/ontwerpen/"
+  to = "/realisaties/"
+  status = 301
+
+[[redirects]]
+  from = "/onderhoud/"
+  to = "/realisaties/"
+  status = 301
+
 [[headers]]
   for = "/*"
   [headers.values]
