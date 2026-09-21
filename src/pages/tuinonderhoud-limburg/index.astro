@@ -10,7 +10,7 @@ import Footer from "../../components/Footer.astro";
 import { services } from "../../data/site";
 import { faqSchema } from "../../data/schema";
 
-const service = services.find((s) => s.slug === "tuinonderhoud-hasselt")!;
+const service = services.find((s) => s.slug === "tuinonderhoud-limburg")!;
 const faqItems = [
   {
     q: "Hoe vaak komt Mani Verdi langs voor tuinonderhoud?",
@@ -23,13 +23,13 @@ const faqItems = [
 ];
 const breadcrumbs = [
   { name: "Home", path: "/" },
-  { name: "Tuinonderhoud Limburg", path: "/tuinonderhoud-hasselt/" },
+  { name: "Tuinonderhoud Limburg", path: "/tuinonderhoud-limburg/" },
 ];
 ---
 <Layout
   title="Tuinonderhoud Limburg | Mani Verdi"
   description={service.seoDescription}
-  path="/tuinonderhoud-hasselt/"
+  path="/tuinonderhoud-limburg/"
   heroImage="/images/project-terras.jpg"
   image={service.image}
   breadcrumbs={breadcrumbs}
@@ -57,7 +57,7 @@ const breadcrumbs = [
           tussentijds controle. Wie dat ritme laat schieten, ziet het jaar erna hoeveel werk het inhaalt.
         </p>
         <p>
-          Voor tuinen die Mani Verdi zelf heeft <a href="/tuinaanleg-hasselt/">aangelegd</a>, sluit het onderhoud
+          Voor tuinen die Mani Verdi zelf heeft <a href="/tuinaanleg-limburg/">aangelegd</a>, sluit het onderhoud
           naadloos aan: hetzelfde team kent de beplanting, de bodem en de keuzes die bij het ontwerp zijn gemaakt.
         </p>
 
@@ -95,7 +95,7 @@ const breadcrumbs = [
       </div>
     </section>
     <Faq items={faqItems} />
-    <RelatedServices exclude="tuinonderhoud-hasselt" />
+    <RelatedServices exclude="tuinonderhoud-limburg" />
     <Cta />
   </main>
   <Footer />

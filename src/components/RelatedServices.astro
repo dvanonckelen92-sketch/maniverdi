@@ -13,7 +13,7 @@ const items = allServices.filter((s) => s.slug !== exclude);
     <div class="related-grid">
       {items.map((s) => (
         <a class="related-card" href={`/${s.slug}/`}>
-          <img src={s.image} alt={s.imageAlt} loading="lazy" />
+          <img src={s.image} width={s.imageW} height={s.imageH} alt={s.imageAlt} loading="lazy" />
           <span>{s.navLabel}</span>
         </a>
       ))}

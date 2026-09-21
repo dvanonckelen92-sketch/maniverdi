@@ -7,6 +7,8 @@ export type BlogPost = {
   date: string;
   dateDisplay: string;
   image: string;
+  imageW: number;
+  imageH: number;
   imageAlt: string;
 };
 
@@ -22,6 +24,8 @@ export const blogPosts: BlogPost[] = [
     date: "2026-09-18",
     dateDisplay: "18 september 2026",
     image: "/images/stormschade.jpg",
+    imageW: 1440,
+    imageH: 1800,
     imageAlt: "Omgewaaide boom en stormschade in een tuin, opgeruimd door Mani Verdi",
   },
 ];

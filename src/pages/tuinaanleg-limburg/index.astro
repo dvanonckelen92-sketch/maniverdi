@@ -10,7 +10,7 @@ import Footer from "../../components/Footer.astro";
 import { services } from "../../data/site";
 import { faqSchema } from "../../data/schema";
 
-const service = services.find((s) => s.slug === "tuinaanleg-hasselt")!;
+const service = services.find((s) => s.slug === "tuinaanleg-limburg")!;
 const faqItems = [
   {
     q: "Wat kost tuinaanleg in Limburg?",
@@ -23,13 +23,13 @@ const faqItems = [
 ];
 const breadcrumbs = [
   { name: "Home", path: "/" },
-  { name: "Tuinaanleg Limburg", path: "/tuinaanleg-hasselt/" },
+  { name: "Tuinaanleg Limburg", path: "/tuinaanleg-limburg/" },
 ];
 ---
 <Layout
   title="Tuinaanleg Limburg | Mani Verdi"
   description={service.seoDescription}
-  path="/tuinaanleg-hasselt/"
+  path="/tuinaanleg-limburg/"
   image={service.image}
   heroImage={service.image}
   breadcrumbs={breadcrumbs}
@@ -59,7 +59,7 @@ const breadcrumbs = [
         </p>
         <p>
           Voor projecten die eerst grondverzet of afbraak van oude verhardingen vereisen, gebeuren die
-          <a href="/grondwerken-hasselt/">grondwerken</a> door hetzelfde team, zodat er geen tweede aannemer nodig is
+          <a href="/grondwerken-limburg/">grondwerken</a> door hetzelfde team, zodat er geen tweede aannemer nodig is
           en de planning in eigen hand blijft.
         </p>
 
@@ -74,7 +74,7 @@ const breadcrumbs = [
         <h2>Na de aanleg: onderhoud dat de investering beschermt</h2>
         <p>
           Een nieuw aangelegde tuin heeft in het eerste jaar extra zorg nodig: aanslaan van planten, bijsturen van
-          het gazon en eerste snoeibeurten. Mani Verdi biedt hiervoor <a href="/tuinonderhoud-hasselt/">tuinonderhoud</a>
+          het gazon en eerste snoeibeurten. Mani Verdi biedt hiervoor <a href="/tuinonderhoud-limburg/">tuinonderhoud</a>
           aan, met hetzelfde team dat de tuin heeft aangelegd en dus elk detail kent.
         </p>
       </div>
@@ -108,7 +108,7 @@ const breadcrumbs = [
       </div>
     </section>
     <Faq items={faqItems} />
-    <RelatedServices exclude="tuinaanleg-hasselt" />
+    <RelatedServices exclude="tuinaanleg-limburg" />
     <Cta />
   </main>
   <Footer />

@@ -1,10 +1,10 @@
 ---
 const items = [
-  { img: "/images/tuinontwerp.jpg", alt: "3D-tuinontwerp met houten pergola en loungehoek", tag: "Ontwerpen" },
-  { img: "/images/tuinaanleg.jpg", alt: "Afgewerkt totaalproject met grindoprit", tag: "Totaalprojecten" },
-  { img: "/images/hagen.jpg", alt: "Strak gesnoeide buxushagen na onderhoud", tag: "Onderhoud" },
-  { img: "/images/grondwerken.jpg", alt: "Grond- en afbraakwerken in uitvoering", tag: "Grond & afbraak" },
-  { img: "/images/riolering.jpg", alt: "Graafwerk voor een rioleringsleiding in een tuin", tag: "Riolering" },
+  { img: "/images/tuinontwerp.jpg", w: 1920, h: 1080, alt: "3D-tuinontwerp met houten pergola en loungehoek", tag: "Ontwerpen" },
+  { img: "/images/tuinaanleg.jpg", w: 1200, h: 1600, alt: "Afgewerkt totaalproject met grindoprit", tag: "Totaalprojecten" },
+  { img: "/images/hagen.jpg", w: 526, h: 512, alt: "Strak gesnoeide buxushagen na onderhoud", tag: "Onderhoud" },
+  { img: "/images/grondwerken.jpg", w: 526, h: 512, alt: "Grond- en afbraakwerken in uitvoering", tag: "Grond & afbraak" },
+  { img: "/images/riolering.jpg", w: 526, h: 512, alt: "Graafwerk voor een rioleringsleiding in een tuin", tag: "Riolering" },
 ];
 ---
 <section class="work" id="realisaties">
@@ -19,7 +19,7 @@ const items = [
     <div class="work-grid">
       {items.map((it) => (
         <div class="work-item">
-          <img src={it.img} alt={it.alt} loading="lazy" />
+          <img src={it.img} width={it.w} height={it.h} alt={it.alt} loading="lazy" />
           <span class="tag">{it.tag}</span>
         </div>
       ))}

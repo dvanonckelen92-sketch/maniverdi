@@ -53,12 +53,14 @@ export type Service = {
   seoDescription: string;
   heroLede: string;
   image: string;
+  imageW: number;
+  imageH: number;
   imageAlt: string;
 };
 
 export const services: Service[] = [
   {
-    slug: "tuinontwerp-hasselt",
+    slug: "tuinontwerp-limburg",
     keyword: "tuinontwerp Limburg",
     navLabel: "Tuinontwerp",
     title: "Tuinontwerp Limburg",
@@ -67,10 +69,12 @@ export const services: Service[] = [
     heroLede:
       "Een tuinplan dat rekening houdt met bezonning, grondsoort en hoe u de tuin écht gebruikt, opgemaakt door hetzelfde team dat de aanleg nadien uitvoert, in heel Limburg.",
     image: "/images/tuinontwerp.jpg",
+    imageW: 1920,
+    imageH: 1080,
     imageAlt: "3D-tuinontwerp met houten pergola, loungehoek en terras, getekend door Mani Verdi",
   },
   {
-    slug: "tuinaanleg-hasselt",
+    slug: "tuinaanleg-limburg",
     keyword: "tuinaanleg Limburg",
     navLabel: "Tuinaanleg",
     title: "Tuinaanleg Limburg",
@@ -79,10 +83,12 @@ export const services: Service[] = [
     heroLede:
       "Van grondwerk tot de laatste plant: Mani Verdi legt tuinen aan in heel Limburg met professionele machines en duurzame materialen.",
     image: "/images/tuinaanleg.jpg",
+    imageW: 1200,
+    imageH: 1600,
     imageAlt: "Afgewerkt tuinaanlegproject met grindoprit bij een woning in Hasselt",
   },
   {
-    slug: "tuinonderhoud-hasselt",
+    slug: "tuinonderhoud-limburg",
     keyword: "tuinonderhoud Limburg",
     navLabel: "Tuinonderhoud",
     title: "Tuinonderhoud Limburg",
@@ -91,10 +97,12 @@ export const services: Service[] = [
     heroLede:
       "Een tuin blijft maar mooi met regelmatig onderhoud. Mani Verdi verzorgt snoei, gazon en seizoenswerk in heel Limburg, het hele jaar door.",
     image: "/images/hagen.jpg",
+    imageW: 526,
+    imageH: 512,
     imageAlt: "Strak gesnoeide hagen bij een woning in Hasselt",
   },
   {
-    slug: "grondwerken-hasselt",
+    slug: "grondwerken-limburg",
     keyword: "grondwerken Limburg",
     navLabel: "Grond- & afbraakwerken",
     title: "Grondwerken Limburg",
@@ -103,10 +111,12 @@ export const services: Service[] = [
     heroLede:
       "Voor elk tuinproject dat begint bij nul: grondverzet, afbraak van oude verhardingen en egalisatie, uitgevoerd met professionele machines in heel Limburg.",
     image: "/images/grondwerken.jpg",
+    imageW: 526,
+    imageH: 512,
     imageAlt: "Grond- en afbraakwerken als basis voor een nieuw tuinproject",
   },
   {
-    slug: "rioleringswerken-hasselt",
+    slug: "rioleringswerken-limburg",
     keyword: "rioleringswerken Limburg",
     navLabel: "Rioleringswerken",
     title: "Rioleringswerken Limburg",
@@ -115,6 +125,8 @@ export const services: Service[] = [
     heroLede:
       "Bij een tuinrenovatie komt de riolering vaak mee aan de beurt. Mani Verdi legt en herstelt rioleringen als onderdeel van het grondwerk, in heel Limburg.",
     image: "/images/riolering.jpg",
+    imageW: 526,
+    imageH: 512,
     imageAlt: "Graafwerk voor een rioleringsleiding in een tuin in Hasselt",
   },
 ];

@@ -10,7 +10,7 @@ import Footer from "../../components/Footer.astro";
 import { services } from "../../data/site";
 import { faqSchema } from "../../data/schema";
 
-const service = services.find((s) => s.slug === "grondwerken-hasselt")!;
+const service = services.find((s) => s.slug === "grondwerken-limburg")!;
 const faqItems = [
   {
     q: "Verzorgt Mani Verdi ook de afvoer van grond en afbraakmateriaal?",
@@ -23,13 +23,13 @@ const faqItems = [
 ];
 const breadcrumbs = [
   { name: "Home", path: "/" },
-  { name: "Grondwerken Limburg", path: "/grondwerken-hasselt/" },
+  { name: "Grondwerken Limburg", path: "/grondwerken-limburg/" },
 ];
 ---
 <Layout
   title="Grondwerken Limburg | Mani Verdi"
   description={service.seoDescription}
-  path="/grondwerken-hasselt/"
+  path="/grondwerken-limburg/"
   heroImage="/images/project-beton.jpg"
   image={service.image}
   breadcrumbs={breadcrumbs}
@@ -62,14 +62,14 @@ const breadcrumbs = [
         <p>
           Bij een tuinrenovatie moet vaak eerst oude bestrating, een verouderd terras of een bijgebouw weg. Mani
           Verdi breekt deze constructies af en voert het puin af, zodat er een schone basis overblijft voor de
-          nieuwe <a href="/tuinaanleg-hasselt/">tuinaanleg</a>.
+          nieuwe <a href="/tuinaanleg-limburg/">tuinaanleg</a>.
         </p>
 
         <h2>Grondwerk en riolering horen vaak samen</h2>
         <p>
           Wanneer grondwerken plaatsvinden, komt de riolering geregeld mee aan de beurt, bijvoorbeeld bij een
           afkoppeling van hemelwater of een verplaatsing van een aansluiting. Mani Verdi voert deze
-          <a href="/rioleringswerken-hasselt/">rioleringswerken</a> uit als onderdeel van hetzelfde traject, zodat de
+          <a href="/rioleringswerken-limburg/">rioleringswerken</a> uit als onderdeel van hetzelfde traject, zodat de
           werf maar één keer open hoeft.
         </p>
 
@@ -94,7 +94,7 @@ const breadcrumbs = [
       </div>
     </section>
     <Faq items={faqItems} />
-    <RelatedServices exclude="grondwerken-hasselt" />
+    <RelatedServices exclude="grondwerken-limburg" />
     <Cta />
   </main>
   <Footer />

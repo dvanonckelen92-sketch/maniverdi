@@ -7,11 +7,11 @@ import Cta from "../../components/Cta.astro";
 import Footer from "../../components/Footer.astro";
 
 const items = [
-  { img: "/images/tuinontwerp.jpg", alt: "3D-tuinontwerp met houten pergola en loungehoek", tag: "Ontwerp", href: "/tuinontwerp-hasselt/" },
-  { img: "/images/tuinaanleg.jpg", alt: "Afgewerkt totaalproject met grindoprit", tag: "Totaalproject", href: "/tuinaanleg-hasselt/" },
-  { img: "/images/hagen.jpg", alt: "Strak gesnoeide buxushagen na onderhoud", tag: "Onderhoud", href: "/tuinonderhoud-hasselt/" },
-  { img: "/images/grondwerken.jpg", alt: "Grond- en afbraakwerken in uitvoering", tag: "Grond & afbraak", href: "/grondwerken-hasselt/" },
-  { img: "/images/riolering.jpg", alt: "Graafwerk voor een rioleringsleiding in een tuin", tag: "Riolering", href: "/rioleringswerken-hasselt/" },
+  { img: "/images/tuinontwerp.jpg", w: 1920, h: 1080, alt: "3D-tuinontwerp met houten pergola en loungehoek", tag: "Ontwerp", href: "/tuinontwerp-limburg/" },
+  { img: "/images/tuinaanleg.jpg", w: 1200, h: 1600, alt: "Afgewerkt totaalproject met grindoprit", tag: "Totaalproject", href: "/tuinaanleg-limburg/" },
+  { img: "/images/hagen.jpg", w: 526, h: 512, alt: "Strak gesnoeide buxushagen na onderhoud", tag: "Onderhoud", href: "/tuinonderhoud-limburg/" },
+  { img: "/images/grondwerken.jpg", w: 526, h: 512, alt: "Grond- en afbraakwerken in uitvoering", tag: "Grond & afbraak", href: "/grondwerken-limburg/" },
+  { img: "/images/riolering.jpg", w: 526, h: 512, alt: "Graafwerk voor een rioleringsleiding in een tuin", tag: "Riolering", href: "/rioleringswerken-limburg/" },
 ];
 
 const breadcrumbs = [
@@ -45,7 +45,7 @@ const breadcrumbs = [
         <div class="related-grid cols-3">
           {items.map((it) => (
             <a class="related-card" href={it.href} style="aspect-ratio:4/5">
-              <img src={it.img} alt={it.alt} loading="lazy" />
+              <img src={it.img} width={it.w} height={it.h} alt={it.alt} loading="lazy" />
               <span>{it.tag}</span>
             </a>
           ))}

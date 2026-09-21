@@ -15,7 +15,7 @@ import { services } from "../data/site";
   <div class="wrap service-grid">
     {services.map((s) => (
       <a class="service-card" href={`/${s.slug}/`}>
-        <img src={s.image} alt={s.imageAlt} />
+        <img src={s.image} width={s.imageW} height={s.imageH} alt={s.imageAlt} />
         <div class="service-card-text">
           <h3>{s.navLabel}</h3>
           <p>{s.heroLede.slice(0, 70)}…</p>

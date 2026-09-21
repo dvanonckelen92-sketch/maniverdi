@@ -11,37 +11,37 @@
 
 [[redirects]]
   from = "/tuinontwerp/"
-  to = "/tuinontwerp-hasselt/"
+  to = "/tuinontwerp-limburg/"
   status = 301
 
 [[redirects]]
   from = "/tuinaanleg/"
-  to = "/tuinaanleg-hasselt/"
+  to = "/tuinaanleg-limburg/"
   status = 301
 
 [[redirects]]
   from = "/tuinonderhoud/"
-  to = "/tuinonderhoud-hasselt/"
+  to = "/tuinonderhoud-limburg/"
   status = 301
 
 [[redirects]]
   from = "/rioleringswerken/"
-  to = "/rioleringswerken-hasselt/"
+  to = "/rioleringswerken-limburg/"
   status = 301
 
 [[redirects]]
   from = "/grond-afbraakwerken/"
-  to = "/grondwerken-hasselt/"
+  to = "/grondwerken-limburg/"
   status = 301
 
 [[redirects]]
   from = "/grond-en-afbraakwerken/"
-  to = "/grondwerken-hasselt/"
+  to = "/grondwerken-limburg/"
   status = 301
 
 [[redirects]]
   from = "/klinker-en-bestratingswerken/"
-  to = "/tuinaanleg-hasselt/"
+  to = "/tuinaanleg-limburg/"
   status = 301
 
 [[redirects]]
@@ -57,6 +57,34 @@
 [[redirects]]
   from = "/onderhoud/"
   to = "/realisaties/"
+  status = 301
+
+# 301-redirects van de -hasselt slugs (geïndexeerd sinds de lancering) naar de
+# huidige -limburg slugs, na de verschuiving van de positionering naar heel
+# Limburg (fc7f75c).
+[[redirects]]
+  from = "/tuinontwerp-hasselt/"
+  to = "/tuinontwerp-limburg/"
+  status = 301
+
+[[redirects]]
+  from = "/tuinaanleg-hasselt/"
+  to = "/tuinaanleg-limburg/"
+  status = 301
+
+[[redirects]]
+  from = "/tuinonderhoud-hasselt/"
+  to = "/tuinonderhoud-limburg/"
+  status = 301
+
+[[redirects]]
+  from = "/grondwerken-hasselt/"
+  to = "/grondwerken-limburg/"
+  status = 301
+
+[[redirects]]
+  from = "/rioleringswerken-hasselt/"
+  to = "/rioleringswerken-limburg/"
   status = 301
 
 [[headers]]

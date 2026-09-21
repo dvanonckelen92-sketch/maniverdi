@@ -10,7 +10,7 @@ import Footer from "../../components/Footer.astro";
 import { services } from "../../data/site";
 import { faqSchema } from "../../data/schema";
 
-const service = services.find((s) => s.slug === "tuinontwerp-hasselt")!;
+const service = services.find((s) => s.slug === "tuinontwerp-limburg")!;
 const faqItems = [
   {
     q: "Wat kost een tuinontwerp in Limburg?",
@@ -23,13 +23,13 @@ const faqItems = [
 ];
 const breadcrumbs = [
   { name: "Home", path: "/" },
-  { name: "Tuinontwerp Limburg", path: "/tuinontwerp-hasselt/" },
+  { name: "Tuinontwerp Limburg", path: "/tuinontwerp-limburg/" },
 ];
 ---
 <Layout
   title="Tuinontwerp Limburg | Mani Verdi"
   description={service.seoDescription}
-  path="/tuinontwerp-hasselt/"
+  path="/tuinontwerp-limburg/"
   image={service.image}
   heroImage={service.image}
   breadcrumbs={breadcrumbs}
@@ -58,7 +58,7 @@ const breadcrumbs = [
           in Kermt of een zonnig, winderig perceel in Wimmertingen, houdt geen stand.
         </p>
         <p>
-          Omdat hetzelfde team dat het ontwerp tekent ook de <a href="/tuinaanleg-hasselt/">tuinaanleg</a>
+          Omdat hetzelfde team dat het ontwerp tekent ook de <a href="/tuinaanleg-limburg/">tuinaanleg</a>
           uitvoert, blijft een tuinplan realistisch: geen elementen die op papier goed ogen maar in de praktijk
           niet uitvoerbaar of betaalbaar zijn.
         </p>
@@ -73,7 +73,7 @@ const breadcrumbs = [
         <p>
           Veel tuinprojecten in Limburg lopen vast tussen ontwerper en uitvoerder, wanneer een tekenaar iets voorstelt
           dat de aannemer nadien anders aanpakt. Bij Mani Verdi valt dat weg: hetzelfde aanspreekpunt begeleidt het
-          project van eerste schets tot de laatste plant, en later ook bij het <a href="/tuinonderhoud-hasselt/">tuinonderhoud</a>.
+          project van eerste schets tot de laatste plant, en later ook bij het <a href="/tuinonderhoud-limburg/">tuinonderhoud</a>.
         </p>
       </div>
     </section>
@@ -91,7 +91,7 @@ const breadcrumbs = [
       </div>
     </section>
     <Faq items={faqItems} />
-    <RelatedServices exclude="tuinontwerp-hasselt" />
+    <RelatedServices exclude="tuinontwerp-limburg" />
     <Cta />
   </main>
   <Footer />

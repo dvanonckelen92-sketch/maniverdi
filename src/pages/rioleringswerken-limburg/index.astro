@@ -10,7 +10,7 @@ import Footer from "../../components/Footer.astro";
 import { services } from "../../data/site";
 import { faqSchema } from "../../data/schema";
 
-const service = services.find((s) => s.slug === "rioleringswerken-hasselt")!;
+const service = services.find((s) => s.slug === "rioleringswerken-limburg")!;
 const faqItems = [
   {
     q: "Voert Mani Verdi ook de afkoppeling van hemelwater uit?",
@@ -23,13 +23,13 @@ const faqItems = [
 ];
 const breadcrumbs = [
   { name: "Home", path: "/" },
-  { name: "Rioleringswerken Limburg", path: "/rioleringswerken-hasselt/" },
+  { name: "Rioleringswerken Limburg", path: "/rioleringswerken-limburg/" },
 ];
 ---
 <Layout
   title="Rioleringswerken Limburg | Mani Verdi"
   description={service.seoDescription}
-  path="/rioleringswerken-hasselt/"
+  path="/rioleringswerken-limburg/"
   heroImage="/images/project-oprit.jpg"
   image={service.image}
   breadcrumbs={breadcrumbs}
@@ -55,7 +55,7 @@ const breadcrumbs = [
           Rioleringswerken komen bij Mani Verdi meestal aan bod als onderdeel van een groter project:
           een nieuwe aansluiting bij tuinaanleg, herstel van een verzakte leiding, of een afkoppeling van hemelwater
           bij een renovatie. Omdat dit werk samenvalt met het grondwerk, wordt het uitgevoerd door hetzelfde team dat
-          ook de <a href="/grondwerken-hasselt/">grondwerken</a> doet.
+          ook de <a href="/grondwerken-limburg/">grondwerken</a> doet.
         </p>
 
         <h2>Aansluiting, afkoppeling en herstel</h2>
@@ -69,7 +69,7 @@ const breadcrumbs = [
         <p>
           Wanneer rioleringswerken los worden aanbesteed van de tuinaanleg, ligt de werf vaak twee keer open en
           moeten twee aannemers hun planning op elkaar afstemmen. Bij Mani Verdi gebeurt dit binnen één traject, van
-          grondwerk tot de uiteindelijke <a href="/tuinaanleg-hasselt/">tuinaanleg</a>.
+          grondwerk tot de uiteindelijke <a href="/tuinaanleg-limburg/">tuinaanleg</a>.
         </p>
       </div>
     </section>
@@ -85,7 +85,7 @@ const breadcrumbs = [
       </div>
     </section>
     <Faq items={faqItems} />
-    <RelatedServices exclude="rioleringswerken-hasselt" />
+    <RelatedServices exclude="rioleringswerken-limburg" />
     <Cta />
   </main>
   <Footer />
