@@ -23,7 +23,7 @@ export const blogPosts: BlogPost[] = [
       "Een omgewaaide boom, verzakte bestrating of een kapotte haag na storm: dit is de volgorde waarin u het best te werk gaat.",
     date: "2026-09-18",
     dateDisplay: "18 september 2026",
-    image: "/images/stormschade.jpg",
+    image: "/images/stormschade.webp",
     imageW: 1440,
     imageH: 1800,
     imageAlt: "Omgewaaide boom en stormschade in een tuin, opgeruimd door Mani Verdi",

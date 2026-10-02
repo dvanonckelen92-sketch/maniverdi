@@ -5,8 +5,8 @@ import { services } from "../data/site";
   <div class="wrap intro-grid">
     <h2>Onze diensten in heel Limburg</h2>
     <div class="intro-body">
-      <p>Voor tuinontwerp, tuinaanleg en tuinonderhoud werkt Mani Verdi met professionele machines en materialen die tegen zon, vorst en jarenlang gebruik bestand zijn, zodat een terras of border er ook na tien jaar nog verzorgd bij ligt.</p>
-      <p>U kiest zelf welk deel u nodig heeft: enkel het ontwerp, de volledige aanleg, of het onderhoud nadien. Alles op maat van uw wensen.</p>
+      <p>Mani Verdi ontwerpt, legt aan en onderhoudt tuinen. We gebruiken eigen machines en materialen die tegen zon, vorst en dagelijks gebruik kunnen.</p>
+      <p>U hoeft niet alles bij ons te laten doen. Alleen een ontwerp, enkel de aanleg of alleen het onderhoud nadien kan ook.</p>
     </div>
   </div>
 </section>
@@ -15,7 +15,7 @@ import { services } from "../data/site";
   <div class="wrap service-grid">
     {services.map((s) => (
       <a class="service-card" href={`/${s.slug}/`}>
-        <img src={s.image} width={s.imageW} height={s.imageH} alt={s.imageAlt} />
+        <img src={s.image} width={s.imageW} height={s.imageH} alt={s.imageAlt} loading="lazy" />
         <div class="service-card-text">
           <h3>{s.navLabel}</h3>
           <p>{s.heroLede.slice(0, 70)}…</p>

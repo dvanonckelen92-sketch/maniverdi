@@ -41,12 +41,7 @@ const organizationSchema = {
   email: site.email,
   priceRange: site.priceRange,
   foundingDate: site.foundingDate,
-  founder: {
-    "@type": "Person",
-    "@id": `${site.url}/#founder`,
-    name: site.founder,
-    jobTitle: "Zaakvoerder",
-  },
+  founder: { "@id": `${site.url}/#founder` },
   inLanguage: "nl-BE",
   sameAs: [site.social.facebook, site.social.instagram],
   knowsAbout: ["Tuinontwerp", "Tuinaanleg", "Tuinonderhoud", "Grondwerken", "Rioleringswerken"],
@@ -72,6 +67,17 @@ const organizationSchema = {
     opens: site.openingHours.opens,
     closes: site.openingHours.closes,
   },
+};
+
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": `${site.url}/#founder`,
+  name: site.founder,
+  jobTitle: "Zaakvoerder",
+  url: `${site.url}/over-ons/`,
+  worksFor: { "@id": `${site.url}/#organization` },
+  knowsAbout: ["Tuinontwerp", "Tuinaanleg", "Tuinonderhoud", "Grondwerken", "Rioleringswerken"],
 };
 
 const websiteSchema = {
@@ -110,6 +116,7 @@ const webPageSchema = {
 
 const allSchemas = [
   organizationSchema,
+  personSchema,
   websiteSchema,
   webPageSchema,
   ...(breadcrumbSchema ? [breadcrumbSchema] : []),

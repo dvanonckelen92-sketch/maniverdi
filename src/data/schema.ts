@@ -14,7 +14,7 @@ export function blogPostingSchema(post: BlogPost) {
     dateModified: post.date,
     url,
     mainEntityOfPage: { "@type": "WebPage", "@id": url },
-    author: { "@type": "Organization", name: site.name, url: site.url },
+    author: { "@type": "Person", "@id": `${site.url}/#founder`, name: site.founder, url: `${site.url}/over-ons/` },
     publisher: {
       "@type": "Organization",
       name: site.name,
