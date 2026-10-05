@@ -70,7 +70,7 @@ const year = new Date().getFullYear();
       <span>© {year} {site.name} {site.legalForm}, {site.tagline}</span>
       <span>Ondernemingsnummer {site.companyNumber}</span>
       <span><a href="/privacyverklaring/">Privacyverklaring</a></span>
-      <span>Website door <a href={site.builtBy.url} target="_blank" rel="noopener">{site.builtBy.name}</a></span>
+      <span>Website door <a href={site.builtBy.url} target="_blank" rel="nofollow noopener">{site.builtBy.name}</a></span>
     </div>
   </div>
 </footer>
