@@ -43,6 +43,7 @@ export const towns = [
   "Zonhoven",
   "Herk-de-Stad",
   "Sint-Truiden",
+  "Wellen",
 ] as const;
 
 export type Service = {
@@ -136,7 +137,7 @@ export type Faq = { q: string; a: string };
 export const faqs: Faq[] = [
   {
     q: "In welke regio werkt Mani Verdi?",
-    a: "Mani Verdi is gevestigd in Hasselt en werkt in heel Limburg, met Hasselt, Heusden-Zolder, Genk en Bilzen als belangrijkste werkgebieden, aangevuld met Kermt, Kuringen, Wimmertingen, Runkst, Diepenbeek, Zonhoven, Herk-de-Stad en Sint-Truiden.",
+    a: "Mani Verdi is gevestigd in Hasselt en werkt in heel Limburg, met Hasselt, Heusden-Zolder, Genk en Bilzen als belangrijkste werkgebieden, aangevuld met Kermt, Kuringen, Wimmertingen, Runkst, Diepenbeek, Zonhoven, Herk-de-Stad, Sint-Truiden en Wellen.",
   },
   {
     q: "Wat kost een tuin laten aanleggen in Limburg?",
